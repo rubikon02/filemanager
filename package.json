@@ -1,18 +1,26 @@
 {
-  "name": "filemanager",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "dependencies": {
-    "express": "^4.17.1",
-    "express-handlebars": "^5.2.0",
-    "formidable": "^1.2.2"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "",
-  "license": "ISC"
+    "name": "filemanager",
+    "version": "1.0.0",
+    "main": "server.js",
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-handlebars": "^5.2.0",
+        "formidable": "^1.2.2"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rubikon02/projekt-filemanager.git"
+    },
+    "bugs": {
+        "url": "https://github.com/rubikon02/projekt-filemanager/issues"
+    },
+    "homepage": "https://github.com/rubikon02/projekt-filemanager#readme",
+    "description": ""
 }
