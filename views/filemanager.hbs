@@ -1,0 +1,23 @@
+<aside>
+    <div>
+        filemanager
+    </div>
+    <a href="/reset">usuń dane o plikach z tablicy</a>
+</aside>
+<div class="content">
+    <table>
+        <tr>
+            <th>id</th>
+            <th>path</th>
+            <th>name</th>
+            <th>size</th>
+            <th>type</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+        </tr>
+        {{#each files}}
+        {{> fileTableRow}}
+        {{/each}}
+    </table>
+</div>
