@@ -35,8 +35,8 @@ app.post('/handleUpload', function (req, res) {
         else
             for (let file of files.imagetoupload)
                 pushFile(file)
+        res.redirect("/filemanager")
     });
-    res.redirect("/filemanager")
 });
 app.get("/upload", function (req, res) {
     res.render('upload.hbs')
