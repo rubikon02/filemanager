@@ -24,21 +24,20 @@ app.get("/", function (req, res) {
 app.get("/filemanager", function (req, res) {
     res.render('filemanager.hbs', { files: table })
 })
-app.post("/handleUpload", function (req, res) {
-    res.setHeader('content-type', 'application/json')
-    const form = formidable({})
-    form.keepExtensions = true
-    form.multiples = true
-    form.uploadDir = __dirname + '/static/upload/'
+app.post('/handleUpload', function (req, res) {
+    var form = new formidable.IncomingForm();
+    form.uploadDir = __dirname + '/static/upload/'       // folder do zapisu zdjęcia
+    form.keepExtensions = true                           // zapis z rozszerzeniem pliku
+    form.multiples = true                                // zapis wielu plików                          
     form.parse(req, function (err, fields, files) {
         if (files.imagetoupload[1] == undefined)
             pushFile(files.imagetoupload)
         else
             for (let file of files.imagetoupload)
                 pushFile(file)
-    })
+    });
     res.redirect("/filemanager")
-})
+});
 app.get("/upload", function (req, res) {
     res.render('upload.hbs')
 })
